@@ -24,11 +24,13 @@ public class Question_1 {
 		long startTime=0; 
 		long endTime=0; 
 		long averageTime=0;
-//create array to use
-	
+//set location for files
+		IO.setlocation("/Users/Tim/Desktop/Cpsc_281/Q1");
+		String filename = "Question1.csv"; 
 		
 //row major		
 	System.out.println("::::::::ROW MAJOR:::::::");
+	IO.write(filename, "::::::::ROW MAJOR:::::::\n");
 	for(int a = 0; a<10; a++)
 	{
 		//create 5 arrays for better sample size
@@ -63,6 +65,7 @@ public class Question_1 {
 		//calculate time
 		averageTime=endTime/5; 
 		System.out.println("col size:"+col+"\nRow size:"+row+"\naverage Time:"+averageTime+"\n");
+		IO.write(filename, col +","+averageTime+"\n");
 		
 		//increase size
 		col += 1000; 
@@ -78,6 +81,7 @@ public class Question_1 {
 	
 	//col major
 	System.out.println("::::::::COL MAJOR:::::::");
+	IO.write(filename, "::::::::COL MAJOR:::::::\n");
 	for(int a = 0; a<10; a++)
 	{
 		//create 5 arrays for better sample size
@@ -112,6 +116,7 @@ public class Question_1 {
 		//calculate time
 		averageTime=endTime/5; 
 		System.out.println("col size:"+col+"\nRow size:"+row+"\naverage Time:"+averageTime+"\n");
+		IO.write(filename, col +","+averageTime+"\n");
 		
 		//increase size
 		col += 1000; 
