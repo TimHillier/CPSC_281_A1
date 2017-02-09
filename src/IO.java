@@ -74,7 +74,7 @@ public class IO {
 			
 		//Real location should be the dir that gets created
 		String FileLocation =getlocation();
-		//File file = new File(System.getProperty("user.home"), "poop"); 
+	
 		File file = new File(FileLocation+"/"+filename+".csv"); 
 		
 		//Check to see if file exists. 
